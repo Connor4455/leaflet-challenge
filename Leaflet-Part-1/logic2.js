@@ -21,11 +21,9 @@ let myMap = L.map("mapid", {
 });
 
 d3.json(earthquakesURL, function(earthquakeData) {
-  // Determine the marker size by magnitude
   function markerSize(magnitude) {
     return magnitude * 4;
   };
-  // Determine the marker color by depth
   function chooseColor(depth) {
     switch(true) {
       case depth > 90:
